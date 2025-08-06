@@ -1,8 +1,8 @@
 package com.ecomerce.api.domain.order;
 
 
-import com.ecomerce.api.domain.costumer.Costumer;
-import com.ecomerce.api.domain.product.Product;
+import com.ecomerce.api.domain.customer.CustomerEntity;
+import com.ecomerce.api.domain.product.ProductEntity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -16,12 +16,12 @@ import java.util.List;
 import java.util.UUID;
 
 @Entity
-@Table(name = "order")
+@Table(name = "customer_order")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Order {
+public class OrderEntity {
     @Id
     @GeneratedValue
     private UUID id;
@@ -29,15 +29,19 @@ public class Order {
     private String paymentMethod;
     private String status;
 
-    @OneToMany
-    @JoinColumn(name = "product_id")
-    private List<Product> products = new ArrayList<>();
+    @ManyToMany
+    @JoinTable(
+            name = "order_product",
+            joinColumns = @JoinColumn(name = "order_id"),
+            inverseJoinColumns = @JoinColumn(name = "product_id")
+    )
+    private List<ProductEntity> products = new ArrayList<>();
 
     private Date orderDate;
     private BigDecimal totalPrice;
     private Integer discont;
 
     @ManyToOne
-    @JoinColumn(name = "costumer_id")
-    private Costumer costumer;
+    @JoinColumn(name = "customer_id")
+    private CustomerEntity customer;
 }

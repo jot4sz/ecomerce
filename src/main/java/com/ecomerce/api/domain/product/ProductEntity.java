@@ -19,7 +19,7 @@ import java.util.UUID;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Product {
+public class ProductEntity {
 
     @Id
     @GeneratedValue
@@ -30,5 +30,5 @@ public class Product {
     private BigDecimal price;
     private List<String> imgUrl;
     private String technicalInfo;
-
+    private Boolean avaliable;
 }

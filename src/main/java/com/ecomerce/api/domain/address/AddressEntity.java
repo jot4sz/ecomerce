@@ -1,7 +1,7 @@
 package com.ecomerce.api.domain.address;
 
 
-import com.ecomerce.api.domain.costumer.Costumer;
+import com.ecomerce.api.domain.customer.CustomerEntity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -16,14 +16,14 @@ import java.util.UUID;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Address {
+public class AddressEntity {
 
     @Id
     @GeneratedValue
     private UUID id;
 
-    private String street;
     private String cep;
+    private String street;
     private String city;
     private String uf;
     private String complement;
@@ -32,6 +32,6 @@ public class Address {
 
     @ManyToOne
     @JoinColumn(name = "costumer_id")
-    private Costumer costumer;
+    private CustomerEntity customer;
 
 }

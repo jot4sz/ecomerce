@@ -1,4 +1,4 @@
-package com.ecomerce.api.domain.costumer;
+package com.ecomerce.api.domain.customer;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -13,12 +13,12 @@ import java.util.Date;
 import java.util.UUID;
 
 @Entity
-@Table (name = "costumer")
+@Table (name = "customer")
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Costumer {
+public class CustomerEntity {
     @Id
     @GeneratedValue
     private UUID id;
