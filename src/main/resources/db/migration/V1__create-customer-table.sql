@@ -5,6 +5,6 @@ CREATE TABLE customer (
     full_name VARCHAR(80) NOT NULL,
     email VARCHAR(320) NOT NULL,
     phone VARCHAR(16) NOT NULL,
-    cpf VARCHAR(11) NOT NULL,
+    cpf VARCHAR(11) UNIQUE NOT NULL,
     date_birth DATE NOT NULL
 );
