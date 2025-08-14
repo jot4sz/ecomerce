@@ -10,7 +10,6 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.math.BigDecimal;
-import java.util.List;
 import java.util.UUID;
 
 @Entity
@@ -26,9 +25,10 @@ public class ProductEntity {
     private UUID id;
 
     private String name;
+    private String brand;
     private String description;
     private BigDecimal price;
-    private List<String> imgUrl;
+    //private List<String> imgUrl;
     private String technicalInfo;
-    private Boolean avaliable;
+    private Boolean available;
 }
