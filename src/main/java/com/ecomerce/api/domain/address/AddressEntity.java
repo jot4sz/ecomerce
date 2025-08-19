@@ -31,7 +31,6 @@ public class AddressEntity {
     private Boolean defaultAddress;
 
     @ManyToOne
-    @JoinColumn(name = "costumer_id")
+    @JoinColumn(name = "customer_id")
     private CustomerEntity customer;
-
 }
