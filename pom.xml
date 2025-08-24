@@ -8,11 +8,11 @@
 		<version>3.5.4</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.ecomerce</groupId>
+	<groupId>com.ecommerce</groupId>
 	<artifactId>api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>api</name>
-	<description>Backend para ecomerce</description>
+	<description>Backend para ecommerce</description>
 	<url/>
 	<licenses>
 		<license/>
